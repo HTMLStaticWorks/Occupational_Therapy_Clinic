@@ -1,0 +1,411 @@
+/* RehabNest Occupational Therapy - Dashboard & Auth Stylesheet */
+
+/* Auth Layout (Login & Sign Up) */
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 10% 20%, rgba(14, 74, 78, 0.05) 0%, rgba(43, 122, 120, 0.02) 90%), var(--bg-alt);
+  padding: 2rem 1.5rem;
+}
+
+.auth-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2.5rem;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+}
+
+.auth-brand {
+  display: inline-flex;
+  margin-bottom: 2rem;
+}
+
+.auth-title {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.auth-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  color: var(--text-light);
+  font-size: 0.85rem;
+}
+.auth-divider::before, .auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: var(--card-border);
+}
+.auth-divider span {
+  padding: 0 1rem;
+}
+
+.social-auth-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-auth-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-main);
+  color: var(--heading-color);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.social-auth-btn:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.password-input-wrapper {
+  position: relative;
+}
+.password-toggle-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+/* Dashboard Layout */
+body {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-alt);
+}
+
+/* Sidebar */
+.dashboard-sidebar {
+  width: 280px;
+  background-color: var(--card-bg);
+  border-right: 1px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 900;
+  transition: transform var(--transition-normal);
+}
+
+.sidebar-header {
+  padding: 1.75rem 1.5rem;
+  border-bottom: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-toggle-btn, .sidebar-close-btn {
+  display: none;
+}
+
+.sidebar-nav {
+  padding: 1.5rem 1rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.sidebar-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+.sidebar-link i {
+  font-size: 1.15rem;
+  width: 22px;
+  text-align: center;
+}
+.sidebar-link:hover, .sidebar-link.active {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.sidebar-user {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-info h5 {
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+.user-info span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Main Content Area */
+.dashboard-main {
+  flex: 1;
+  margin-left: 280px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.dashboard-topbar {
+  min-height: 80px;
+  height: auto;
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 800;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.dashboard-content {
+  padding: 2rem;
+  flex: 1;
+}
+
+.dashboard-tab {
+  display: none;
+}
+.dashboard-tab.active {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Stat Cards Widget */
+.stat-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.stat-card-info h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.2rem;
+}
+.stat-card-info p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Checklist / Table Widget */
+.checklist-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--card-border);
+}
+.checklist-item:last-child {
+  border-bottom: none;
+}
+
+.checklist-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.checklist-checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+/* Progress Ring Visual */
+.progress-ring-box {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Table */
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+.custom-table th, .custom-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--card-border);
+}
+.custom-table th {
+  background-color: var(--bg-alt);
+  color: var(--heading-color);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+/* Mobile Sidebar Drawer */
+@media (max-width: 1024px) {
+  .sidebar-toggle-btn, .sidebar-close-btn {
+    display: inline-flex !important;
+  }
+  .dashboard-topbar {
+    padding: 0.75rem 1.25rem;
+    min-height: 70px;
+  }
+  .stat-card-grid { grid-template-columns: repeat(2, 1fr); }
+  .dashboard-sidebar {
+    transform: translateX(-100%);
+    box-shadow: var(--shadow-lg);
+    z-index: 1001;
+  }
+  .dashboard-sidebar.active {
+    transform: translateX(0);
+  }
+  .dashboard-main {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+  .dashboard-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  .dashboard-main {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .dashboard-topbar {
+    padding: 0.75rem 1rem;
+    min-height: 60px;
+    gap: 0.5rem;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .topbar-actions {
+    gap: 0.5rem;
+  }
+  .topbar-title-text p {
+    display: none;
+  }
+  .topbar-title-text h3 {
+    font-size: 1.05rem !important;
+    white-space: nowrap;
+  }
+  .dashboard-content {
+    padding: 1rem 0.85rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .stat-card-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    width: 100% !important;
+  }
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+    width: 100% !important;
+  }
+  .card, .stat-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 1.25rem 1rem !important;
+  }
+  .flex-between {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .auth-card { padding: 2rem 1.5rem; }
+}

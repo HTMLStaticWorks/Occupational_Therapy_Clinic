@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Tele-Rehab Suite | Coming Soon | RehabNest Therapy</title>
+  
+  <link rel="icon" href="https://img.icons8.com/isometric/50/hands.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/rtl.css">
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo">
+        <i class="fas fa-hand-holding-heart"></i>
+        <span>RehabNest</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home 1</a></li>
+          <li><a href="home-2.html" class="nav-link">Home 2</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="therapists.html" class="nav-link">Therapists</a></li>
+          <li><a href="resources.html" class="nav-link">Resources</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li class="mobile-nav-cta">
+            <div class="mobile-toggles">
+              <button class="toggle-btn theme-toggle-btn" aria-label="Toggle Dark Mode" title="Toggle Light/Dark Theme">
+                <i class="fas fa-moon"></i>
+              </button>
+              <button class="toggle-btn rtl-toggle-btn" aria-label="Toggle RTL" title="Toggle LTR/RTL Layout">
+                <i class="fas fa-globe"></i>
+              </button>
+            </div>
+            <a href="signup.html" class="btn btn-sm btn-primary" style="width: 100%; justify-content: center;"><i class="fas fa-user-plus"></i> Sign Up</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="toggle-btn" id="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Light/Dark Theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="toggle-btn" id="rtl-toggle" aria-label="Toggle RTL" title="Toggle LTR/RTL Layout">
+          <i class="fas fa-globe"></i>
+        </button>
+        <a href="signup.html" class="btn btn-sm btn-primary"><i class="fas fa-user-plus"></i> Sign Up</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Mobile Navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 4rem 1.5rem; background: radial-gradient(circle at 50% 30%, var(--primary-light) 0%, var(--bg-main) 70%);">
+    <div class="text-center" style="max-width: 700px;" data-animate="zoom-in">
+      <span class="badge badge-accent" style="margin-bottom: 1.25rem; padding: 0.5rem 1.25rem;">Expanding Our Care</span>
+      <h1 style="margin-bottom: 1.25rem; font-size: clamp(2.2rem, 4vw, 3.5rem);">
+        Virtual Tele-Rehabilitation Portal Launching Soon
+      </h1>
+      <p class="section-desc" style="margin-bottom: 2.5rem;">
+        We are building a state-of-the-art virtual telehealth platform that allows patients to conduct real-time video therapy sessions and AI-driven motor tracking from home.
+      </p>
+
+      <!-- Countdown Timer -->
+      <div style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 3rem;">
+        <div class="card" style="padding: 1.25rem 1.75rem; min-width: 90px;">
+          <h2 style="color: var(--primary); margin: 0;">24</h2>
+          <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Days</span>
+        </div>
+        <div class="card" style="padding: 1.25rem 1.75rem; min-width: 90px;">
+          <h2 style="color: var(--primary); margin: 0;">14</h2>
+          <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Hours</span>
+        </div>
+        <div class="card" style="padding: 1.25rem 1.75rem; min-width: 90px;">
+          <h2 style="color: var(--primary); margin: 0;">45</h2>
+          <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Mins</span>
+        </div>
+        <div class="card" style="padding: 1.25rem 1.75rem; min-width: 90px;">
+          <h2 style="color: var(--primary); margin: 0;">18</h2>
+          <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Secs</span>
+        </div>
+      </div>
+
+      <!-- Newsletter Form -->
+      <div class="card" style="padding: 2rem;">
+        <h4 style="margin-bottom: 0.75rem;">Get Notified Upon Launch</h4>
+        <form data-validate style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <input type="email" class="form-control" required placeholder="Enter your email address..." style="flex: 1; min-width: 240px;">
+          <button type="submit" class="btn btn-primary"><i class="fas fa-bell"></i> Notify Me</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Reusable Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <i class="fas fa-hand-holding-heart"></i>
+            <span>RehabNest</span>
+          </a>
+          <p>Dedicated to helping individuals of all ages overcome physical, sensory, and cognitive barriers to live fully independent lives.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-widget">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="therapists.html">Our Therapists</a></li>
+            <li><a href="resources.html">Patient Resources</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-widget">
+          <h4>Clinical Services</h4>
+          <ul class="footer-links">
+            <li><a href="hand-therapy.html">Hand & Upper Limb Therapy</a></li>
+            <li><a href="sensory-integration.html">Sensory Integration</a></li>
+            <li><a href="post-injury-rehab.html">Post-Injury Rehabilitation</a></li>
+            <li><a href="services.html">Pediatric Occupational Therapy</a></li>
+            <li><a href="services.html">Daily Living Skills Retraining</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-widget">
+          <h4>Contact Information</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>452 Healthcare Boulevard, Suite 300, Medical Plaza, NY 10001</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <span>(555) 234-5678 / (555) 876-5432</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>care@rehabnest-clinic.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 RehabNest Occupational Therapy. All Rights Reserved.</p>
+        <div style="display: flex; gap: 1.5rem; align-items: center;">
+          <a href="login.html" style="color: #8EADAD;">Patient Login</a>
+          <a href="signup.html" style="color: #8EADAD;">Register Portal</a>
+          <a href="404.html" style="color: #8EADAD;">Privacy Policy</a>
+          <button class="back-to-top-btn" title="Back to Top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

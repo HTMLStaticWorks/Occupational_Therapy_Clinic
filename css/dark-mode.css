@@ -1,0 +1,103 @@
+/* RehabNest Occupational Therapy - Dark Mode Stylesheet */
+
+[data-theme="dark"] {
+  --primary: #4DB6AC;
+  --primary-hover: #80CBC4;
+  --primary-light: rgba(77, 182, 172, 0.15);
+  --secondary: #26A69A;
+  --secondary-light: rgba(38, 166, 154, 0.15);
+  --accent: #FF8A65;
+  --accent-hover: #FFAB91;
+  --accent-light: rgba(255, 138, 101, 0.15);
+  --warm-neutral: #141E21;
+  --bg-main: #0B1315;
+  --bg-alt: #101B1E;
+  --card-bg: #152327;
+  --card-border: #1F3238;
+  
+  --text-main: #E1ECEC;
+  --text-muted: #9BB0B0;
+  --text-light: #687E7E;
+  --heading-color: #FFFFFF;
+
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.6);
+  --glass-bg: rgba(16, 27, 30, 0.88);
+  --glass-border: rgba(31, 50, 56, 0.8);
+
+  --success-bg: rgba(46, 125, 50, 0.2);
+  --warning-bg: rgba(245, 124, 0, 0.2);
+  --danger-bg: rgba(211, 47, 47, 0.2);
+}
+
+[data-theme="dark"] .site-header {
+  background-color: var(--glass-bg);
+  border-bottom-color: var(--card-border);
+}
+
+[data-theme="dark"] .brand-logo {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .nav-link {
+  color: var(--text-main);
+}
+[data-theme="dark"] .nav-link:hover, 
+[data-theme="dark"] .nav-link.active {
+  color: var(--primary);
+}
+
+[data-theme="dark"] .toggle-btn {
+  background: var(--card-bg);
+  border-color: var(--card-border);
+  color: #FFFFFF;
+}
+[data-theme="dark"] .toggle-btn:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+[data-theme="dark"] .card {
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+}
+
+[data-theme="dark"] .form-control {
+  background-color: #0E181B;
+  border-color: var(--card-border);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .form-control::placeholder {
+  color: var(--text-light);
+}
+
+[data-theme="dark"] .site-footer {
+  background-color: #050B0D;
+  border-top: 1px solid var(--card-border);
+}
+
+[data-theme="dark"] .modal-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+}
+
+[data-theme="dark"] .modal-close {
+  background-color: var(--bg-alt);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .btn-secondary {
+  background-color: var(--primary-light);
+  color: var(--primary) !important;
+}
+
+[data-theme="dark"] .btn-outline {
+  border-color: var(--primary);
+  color: var(--primary) !important;
+}
+[data-theme="dark"] .btn-outline:hover {
+  background-color: var(--primary);
+  color: #0B1315 !important;
+}

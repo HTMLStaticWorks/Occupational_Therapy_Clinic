@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Portal | RehabNest Occupational Therapy</title>
+  
+  <link rel="icon" href="https://img.icons8.com/isometric/50/hands.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/rtl.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+  <div class="dashboard-container">
+
+    <!-- Dashboard Sidebar -->
+    <aside class="dashboard-sidebar" id="dashboard-sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="brand-logo">
+          <i class="fas fa-hand-holding-heart"></i>
+          <span>RehabNest</span>
+        </a>
+        <button class="toggle-btn sidebar-close-btn" id="sidebar-close" aria-label="Toggle Sidebar Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <ul class="sidebar-menu">
+          <li>
+            <a href="#" class="sidebar-link active" data-tab="overview">
+              <i class="fas fa-th-large"></i> <span>Overview</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="sidebar-link" data-tab="appointments">
+              <i class="fas fa-calendar-check"></i> <span>Appointments</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="sidebar-link" data-tab="exercises">
+              <i class="fas fa-running"></i> <span>Home Exercises</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="sidebar-link" data-tab="notes">
+              <i class="fas fa-notes-medical"></i> <span>Progress Notes</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="sidebar-link" data-tab="equipment">
+              <i class="fas fa-hands-wash"></i> <span>Equipment</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="sidebar-link" data-tab="billing">
+              <i class="fas fa-file-invoice-dollar"></i> <span>Billing & Invoices</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="sidebar-link" data-tab="profile">
+              <i class="fas fa-user"></i> <span>Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="sidebar-link" data-tab="settings">
+              <i class="fas fa-cog"></i> <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-user">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Patient Eleanor Vance avatar" class="user-avatar">
+        <div class="user-info">
+          <h5>Eleanor Vance</h5>
+          <span>Patient ID: #RN-84920</span>
+        </div>
+        <a href="index.html" title="Logout" style="margin-left: auto; color: var(--danger); font-size: 1.1rem;"><i class="fas fa-sign-out-alt"></i></a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+      
+      <!-- Topbar Header -->
+      <header class="dashboard-topbar">
+        <div style="display: flex; align-items: center; gap: 0.75rem; min-width: 0;">
+          <button class="toggle-btn sidebar-toggle-btn" id="sidebar-toggle" aria-label="Toggle Sidebar Menu"><i class="fas fa-bars"></i></button>
+          <div class="topbar-title-text" style="min-width: 0;">
+            <h3 style="font-size: 1.25rem; margin: 0; line-height: 1.2;">Patient Dashboard</h3>
+            <p style="font-size: 0.8rem; margin: 0; color: var(--text-muted);">Welcome back, Eleanor! Here is your therapy overview.</p>
+          </div>
+        </div>
+
+        <div class="topbar-actions">
+          <button class="toggle-btn" id="theme-toggle" aria-label="Toggle Theme" title="Toggle Light/Dark Theme"><i class="fas fa-moon"></i></button>
+          <button class="toggle-btn" id="rtl-toggle" aria-label="Toggle RTL" title="Toggle LTR/RTL Layout"><i class="fas fa-globe"></i></button>
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; position: relative; flex-shrink: 0;">
+            <i class="fas fa-bell"></i>
+            <span style="position: absolute; top: 2px; right: 2px; width: 8px; height: 8px; border-radius: 50%; background: var(--accent);"></span>
+          </div>
+        </div>
+      </header>
+
+      <div class="dashboard-content">
+
+        <!-- TAB 1: OVERVIEW -->
+        <div class="dashboard-tab active" id="tab-overview">
+          
+          <!-- Stat Cards -->
+          <div class="stat-card-grid">
+            <div class="stat-card">
+              <div class="stat-card-icon" style="background: var(--primary-light); color: var(--primary);">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <div class="stat-card-info">
+                <h3>Tomorrow</h3>
+                <p>Next Session: 10:30 AM</p>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-card-icon" style="background: var(--secondary-light); color: var(--secondary);">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="stat-card-info">
+                <h3>85%</h3>
+                <p>Functional Recovery</p>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-card-icon" style="background: var(--accent-light); color: var(--accent);">
+                <i class="fas fa-check-double"></i>
+              </div>
+              <div class="stat-card-info">
+                <h3 id="completed-exercise-count">4 of 5</h3>
+                <p>Exercises Today</p>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-card-icon" style="background: var(--success-bg); color: var(--success);">
+                <i class="fas fa-receipt"></i>
+              </div>
+              <div class="stat-card-info">
+                <h3>$0.00</h3>
+                <p>Balance Due (Insurance Paid)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <!-- Upcoming Session Widget -->
+            <div class="card">
+              <div class="flex-between" style="margin-bottom: 1.5rem;">
+                <h4><i class="fas fa-clock" style="color: var(--primary); margin-right: 0.5rem;"></i> Upcoming Therapy Session</h4>
+                <span class="badge badge-primary">Confirmed</span>
+              </div>
+              <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1.5rem; background: var(--bg-alt); padding: 1.25rem; border-radius: var(--radius-sm); flex-wrap: wrap;">
+                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=120&q=80" alt="Dr. Alisha Vance" style="width: 54px; height: 54px; border-radius: 50%; object-fit: cover;">
+                <div style="flex: 1; min-width: 180px;">
+                  <h5 style="margin: 0;">Dr. Alisha Vance, OTD</h5>
+                  <p style="font-size: 0.85rem; margin: 0; color: var(--text-muted);">Hand & Upper Limb Rehabilitation</p>
+                  <span style="font-size: 0.8rem; color: var(--primary); font-weight: 600;"><i class="fas fa-map-marker-alt"></i> Suite 300 - Hand Therapy Lab</span>
+                </div>
+              </div>
+              <div class="btn-group-equal">
+                <button class="btn btn-sm btn-primary" onclick="alert('Appointment details confirmed!')"><i class="fas fa-video"></i> Pre-Session Prep</button>
+                <button class="btn btn-sm btn-outline" onclick="alert('Reschedule request sent to clinic.')">Reschedule</button>
+              </div>
+            </div>
+
+            <!-- Home Exercise Completion Progress Widget -->
+            <div class="card">
+              <div class="flex-between" style="margin-bottom: 1rem;">
+                <h4><i class="fas fa-tasks" style="color: var(--secondary); margin-right: 0.5rem;"></i> Today's Home Routine</h4>
+                <span class="badge badge-secondary" id="exercise-progress-percent">80%</span>
+              </div>
+              <div style="width: 100%; height: 10px; background: var(--card-border); border-radius: var(--radius-full); margin-bottom: 1.5rem; overflow: hidden;">
+                <div id="exercise-progress-bar" style="width: 80%; height: 100%; background: var(--primary); transition: width 0.4s ease;"></div>
+              </div>
+
+              <div class="checklist-item">
+                <div class="checklist-info">
+                  <input type="checkbox" class="checklist-checkbox exercise-check" checked>
+                  <div>
+                    <strong style="display: block; font-size: 0.95rem;">Finger Tendon Glides</strong>
+                    <span style="font-size: 0.8rem; color: var(--text-muted);">3 sets x 10 reps (Morning)</span>
+                  </div>
+                </div>
+                <span class="badge badge-primary">Done</span>
+              </div>
+
+              <div class="checklist-item">
+                <div class="checklist-info">
+                  <input type="checkbox" class="checklist-checkbox exercise-check" checked>
+                  <div>
+                    <strong style="display: block; font-size: 0.95rem;">Wrist Extension Stretch</strong>
+                    <span style="font-size: 0.8rem; color: var(--text-muted);">Hold 20 secs x 5 reps</span>
+                  </div>
+                </div>
+                <span class="badge badge-primary">Done</span>
+              </div>
+
+              <div class="checklist-item">
+                <div class="checklist-info">
+                  <input type="checkbox" class="checklist-checkbox exercise-check">
+                  <div>
+                    <strong style="display: block; font-size: 0.95rem;">Theraputty Pinch Expansion</strong>
+                    <span style="font-size: 0.8rem; color: var(--text-muted);">5 mins continuous pinch</span>
+                  </div>
+                </div>
+                <span class="badge badge-accent">Pending</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- TAB 2: APPOINTMENTS -->
+        <div class="dashboard-tab" id="tab-appointments">
+          <div class="card" style="margin-bottom: 2rem;">
+            <h4 style="margin-bottom: 1.25rem;"><i class="fas fa-calendar-plus" style="color: var(--primary);"></i> Schedule a New Therapy Session</h4>
+            <form id="dashboard-book-form">
+              <div class="grid-3">
+                <div class="form-group">
+                  <label class="form-label">Select Specialist</label>
+                  <select class="form-control">
+                    <option>Dr. Alisha Vance (Hand Therapy)</option>
+                    <option>Marcus Sterling (Sensory Integration)</option>
+                    <option>Dr. Priya Patel (Neuro Rehab)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Preferred Date</label>
+                  <input type="date" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Preferred Time Slot</label>
+                  <select class="form-control">
+                    <option> Morning (09:00 AM)</option>
+                    <option> Midday (11:30 AM)</option>
+                    <option> Afternoon (02:30 PM)</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i> Book Session</button>
+            </form>
+          </div>
+
+          <div class="card">
+            <h4 style="margin-bottom: 1.25rem;">Appointment History & Upcoming</h4>
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Date & Time</th>
+                  <th>Therapist</th>
+                  <th>Type</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Sep 17, 2026 - 10:30 AM</td>
+                  <td>Dr. Alisha Vance</td>
+                  <td>Hand Rehabilitation</td>
+                  <td><span class="badge badge-primary">Confirmed</span></td>
+                  <td><button class="btn btn-sm btn-outline" onclick="alert('Reschedule request sent.')">Reschedule</button></td>
+                </tr>
+                <tr>
+                  <td>Sep 10, 2026 - 10:30 AM</td>
+                  <td>Dr. Alisha Vance</td>
+                  <td>Progress Re-evaluation</td>
+                  <td><span class="badge badge-secondary">Completed</span></td>
+                  <td><button class="btn btn-sm btn-secondary" onclick="alert('Downloading summary notes...')"><i class="fas fa-download"></i> Notes</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TAB 3: EXERCISES -->
+        <div class="dashboard-tab" id="tab-exercises">
+          <div class="card" style="margin-bottom: 2rem;">
+            <div class="flex-between" style="margin-bottom: 1.5rem;">
+              <h4><i class="fas fa-video" style="color: var(--primary); margin-right: 0.5rem;"></i> Prescribed HD Home Video Routines</h4>
+              <span class="badge badge-primary">Prescribed by Dr. Alisha Vance</span>
+            </div>
+
+            <div class="grid-3">
+              <div class="card" style="padding: 1rem;">
+                <div class="card-img-wrapper" style="margin-bottom: 0.75rem;">
+                  <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=500&q=80" alt="Video thumb">
+                </div>
+                <h5>1. Tendon Gliding Sequence</h5>
+                <p style="font-size: 0.85rem; margin-bottom: 1rem;">Duration: 8 Mins • 3x Daily</p>
+                <button class="btn btn-sm btn-primary" style="width: 100%;" onclick="alert('Playing Video Routine...')"><i class="fas fa-play"></i> Watch Exercise Guide</button>
+              </div>
+
+              <div class="card" style="padding: 1rem;">
+                <div class="card-img-wrapper" style="margin-bottom: 0.75rem;">
+                  <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=500&q=80" alt="Video thumb">
+                </div>
+                <h5>2. Dynamic Pinch Strength</h5>
+                <p style="font-size: 0.85rem; margin-bottom: 1rem;">Duration: 5 Mins • 2x Daily</p>
+                <button class="btn btn-sm btn-primary" style="width: 100%;" onclick="alert('Playing Video Routine...')"><i class="fas fa-play"></i> Watch Exercise Guide</button>
+              </div>
+
+              <div class="card" style="padding: 1rem;">
+                <div class="card-img-wrapper" style="margin-bottom: 0.75rem;">
+                  <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=500&q=80" alt="Video thumb">
+                </div>
+                <h5>3. Forearm Pronation Range</h5>
+                <p style="font-size: 0.85rem; margin-bottom: 1rem;">Duration: 6 Mins • Morning</p>
+                <button class="btn btn-sm btn-primary" style="width: 100%;" onclick="alert('Playing Video Routine...')"><i class="fas fa-play"></i> Watch Exercise Guide</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 4: NOTES -->
+        <div class="dashboard-tab" id="tab-notes">
+          <div class="card">
+            <h4 style="margin-bottom: 1.5rem;"><i class="fas fa-file-medical-alt" style="color: var(--primary); margin-right: 0.5rem;"></i> Therapist Clinical Progress Notes</h4>
+            
+            <div style="border-left: 3px solid var(--primary); padding-left: 1.5rem; margin-bottom: 2rem;">
+              <div class="flex-between" style="margin-bottom: 0.5rem;">
+                <h5>Session Date: September 10, 2026</h5>
+                <span class="badge badge-primary">Dr. Alisha Vance</span>
+              </div>
+              <p style="font-style: italic; color: var(--text-main);">
+                "Patient Eleanor showed significant 15-degree increase in active wrist extension. Grip strength pinch force improved from 12 lbs to 18 lbs. Recommended continuing daily home putty exercises and gradually starting light cooking tasks."
+              </p>
+            </div>
+
+            <div style="border-left: 3px solid var(--secondary); padding-left: 1.5rem;">
+              <div class="flex-between" style="margin-bottom: 0.5rem;">
+                <h5>Session Date: August 28, 2026</h5>
+                <span class="badge badge-secondary">Dr. Alisha Vance</span>
+              </div>
+              <p style="font-style: italic; color: var(--text-main);">
+                "Initial post-op evaluation completed. Edema wrap applied. Custom static extension splint fabricated and fitted comfortably. Patient educated on nerve gliding techniques."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 5: EQUIPMENT -->
+        <div class="dashboard-tab" id="tab-equipment">
+          <div class="card">
+            <h4 style="margin-bottom: 1.5rem;"><i class="fas fa-tools" style="color: var(--primary); margin-right: 0.5rem;"></i> Recommended Adaptive Equipment</h4>
+            
+            <div class="grid-2">
+              <div class="card" style="display: flex; gap: 1rem; align-items: center;">
+                <div style="width: 60px; height: 60px; background: var(--primary-light); color: var(--primary); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                  <i class="fas fa-hand-holding"></i>
+                </div>
+                <div>
+                  <h5>Therapeutic Resisting Putty (Medium Green)</h5>
+                  <p style="font-size: 0.85rem; margin: 0; color: var(--text-muted);">Purpose: Pinch & hand muscle resistance expansion</p>
+                  <span class="badge badge-primary" style="margin-top: 0.5rem;">In Use</span>
+                </div>
+              </div>
+
+              <div class="card" style="display: flex; gap: 1rem; align-items: center;">
+                <div style="width: 60px; height: 60px; background: var(--secondary-light); color: var(--secondary); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                  <i class="fas fa-utensils"></i>
+                </div>
+                <div>
+                  <h5>Ergonomic Built-up Utensil Set</h5>
+                  <p style="font-size: 0.85rem; margin: 0; color: var(--text-muted);">Purpose: Reducing joint strain during daily dining</p>
+                  <span class="badge badge-secondary" style="margin-top: 0.5rem;">Recommended</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 6: BILLING -->
+        <div class="dashboard-tab" id="tab-billing">
+          <div class="card">
+            <h4 style="margin-bottom: 1.5rem;"><i class="fas fa-file-invoice" style="color: var(--primary); margin-right: 0.5rem;"></i> Billing Statement & Claims</h4>
+            
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Invoice ID</th>
+                  <th>Service Rendered</th>
+                  <th>Insurance Claim</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#INV-9402</td>
+                  <td>Occupational Evaluation (CPT 97165)</td>
+                  <td>Blue Cross Blue Shield</td>
+                  <td>$180.00</td>
+                  <td><span class="badge badge-primary">Paid by Ins.</span></td>
+                  <td><button class="btn btn-sm btn-outline" onclick="alert('Downloading Receipt PDF...')"><i class="fas fa-download"></i> Receipt</button></td>
+                </tr>
+                <tr>
+                  <td>#INV-8819</td>
+                  <td>Hand Splint Fabrication (CPT 29185)</td>
+                  <td>Blue Cross Blue Shield</td>
+                  <td>$120.00</td>
+                  <td><span class="badge badge-primary">Paid by Ins.</span></td>
+                  <td><button class="btn btn-sm btn-outline" onclick="alert('Downloading Receipt PDF...')"><i class="fas fa-download"></i> Receipt</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TAB 7: PROFILE -->
+        <div class="dashboard-tab" id="tab-profile">
+          <div class="card">
+            <h4 style="margin-bottom: 1.5rem;"><i class="fas fa-id-card" style="color: var(--primary); margin-right: 0.5rem;"></i> Patient Profile & Emergency Contacts</h4>
+            
+            <form data-validate>
+              <div class="grid-2">
+                <div class="form-group">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" class="form-control" value="Eleanor Vance" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Primary Email</label>
+                  <input type="email" class="form-control" value="eleanor@example.com" required>
+                </div>
+              </div>
+
+              <div class="grid-2">
+                <div class="form-group">
+                  <label class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" value="(555) 345-6789" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Emergency Contact Name & Relation</label>
+                  <input type="text" class="form-control" value="Robert Vance (Spouse)" required>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save Profile Updates</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- TAB 8: SETTINGS -->
+        <div class="dashboard-tab" id="tab-settings">
+          <div class="card">
+            <h4 style="margin-bottom: 1.5rem;"><i class="fas fa-cog" style="color: var(--primary); margin-right: 0.5rem;"></i> Portal Preferences</h4>
+            
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <label style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--card-border); padding-bottom: 1rem;">
+                <div>
+                  <strong>Email Exercise Reminders</strong>
+                  <p style="font-size: 0.85rem; margin: 0; color: var(--text-muted);">Receive daily morning checklist reminders</p>
+                </div>
+                <input type="checkbox" checked style="width: 20px; height: 20px; accent-color: var(--primary);">
+              </label>
+
+              <label style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--card-border); padding-bottom: 1rem;">
+                <div>
+                  <strong>SMS Appointment Confirmation</strong>
+                  <p style="font-size: 0.85rem; margin: 0; color: var(--text-muted);">Receive SMS text 24h prior to clinical session</p>
+                </div>
+                <input type="checkbox" checked style="width: 20px; height: 20px; accent-color: var(--primary);">
+              </label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

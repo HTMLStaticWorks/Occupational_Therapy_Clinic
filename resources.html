@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Resources & Exercise Guides | RehabNest Clinic</title>
+  <meta name="description" content="Access home exercise downloads, ergonomic daily living tips, and appointment preparation guides at RehabNest.">
+  
+  <link rel="icon" href="https://img.icons8.com/isometric/50/hands.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/rtl.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo">
+        <i class="fas fa-hand-holding-heart"></i>
+        <span>RehabNest</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home 1</a></li>
+          <li><a href="home-2.html" class="nav-link">Home 2</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="therapists.html" class="nav-link">Therapists</a></li>
+          <li><a href="resources.html" class="nav-link active">Resources</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li class="mobile-nav-cta">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 0.85rem;">
+              <button class="toggle-btn theme-toggle-btn" aria-label="Toggle Dark Mode" title="Toggle Light/Dark Theme"><i class="fas fa-moon"></i></button>
+              <button class="toggle-btn rtl-toggle-btn" aria-label="Toggle RTL" title="Toggle LTR/RTL Layout"><i class="fas fa-globe"></i></button>
+            </div>
+            <a href="signup.html" class="btn btn-sm btn-primary" style="width: 100%; justify-content: center;"><i class="fas fa-user-plus"></i> Sign Up</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="toggle-btn" id="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Light/Dark Theme"><i class="fas fa-moon"></i></button>
+        <button class="toggle-btn" id="rtl-toggle" aria-label="Toggle RTL" title="Toggle LTR/RTL Layout"><i class="fas fa-globe"></i></button>
+        <a href="signup.html" class="btn btn-sm btn-primary"><i class="fas fa-user-plus"></i> Sign Up</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Mobile Navigation"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- SECTION 1: HERO -->
+    <section class="section" style="padding: 5rem 0 3rem 0; background: var(--bg-alt); text-align: center;">
+      <div class="container" data-animate="fade-in">
+        <span class="section-subtitle"><i class="fas fa-book-medical"></i> Educational Knowledge Hub</span>
+        <h1 style="margin-bottom: 1rem;">Patient Resources & Home Guides</h1>
+        <p class="section-desc" style="max-width: 750px; margin: 0 auto;">
+          Free downloadable guides, home exercise protocols, and practical ergonomic tips to empower your recovery between clinical visits.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 2: HOME EXERCISE RESOURCES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header" data-animate="fade-in">
+          <span class="section-subtitle">Downloadable Guides</span>
+          <h2 class="section-title">Home Exercise Program (HEP) Handouts</h2>
+          <p class="section-desc">Illustrated step-by-step PDF guides created by our certified clinical team.</p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Resource 1 -->
+          <div class="card" data-animate="fade-in">
+            <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;"><i class="fas fa-file-pdf"></i></div>
+            <span class="badge badge-primary" style="margin-bottom: 0.5rem;">Hand & Wrist</span>
+            <h4>Fine Motor Dexterity PDF</h4>
+            <p>10 daily finger gliding exercises, therapeutic putty pinch routines, and wrist flexor stretches.</p>
+            <a href="dashboard.html" class="btn btn-sm btn-secondary" style="margin-top: 1rem; width: 100%;"><i class="fas fa-download"></i> Access via Portal</a>
+          </div>
+
+          <!-- Resource 2 -->
+          <div class="card" data-animate="fade-in">
+            <div style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 1rem;"><i class="fas fa-file-pdf"></i></div>
+            <span class="badge badge-secondary" style="margin-bottom: 0.5rem;">Pediatrics</span>
+            <h4>Sensory Routine Toolkit</h4>
+            <p>Parent guide for creating calming sensory routines and proprioceptive heavy-work games at home.</p>
+            <a href="dashboard.html" class="btn btn-sm btn-secondary" style="margin-top: 1rem; width: 100%;"><i class="fas fa-download"></i> Access via Portal</a>
+          </div>
+
+          <!-- Resource 3 -->
+          <div class="card" data-animate="fade-in">
+            <div style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"><i class="fas fa-file-pdf"></i></div>
+            <span class="badge badge-accent" style="margin-bottom: 0.5rem;">Ergonomics</span>
+            <h4>Home Safety Checklist</h4>
+            <p>Comprehensive environmental evaluation guide for reducing fall risks in bathrooms and kitchens.</p>
+            <a href="dashboard.html" class="btn btn-sm btn-secondary" style="margin-top: 1rem; width: 100%;"><i class="fas fa-download"></i> Access via Portal</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: DAILY INDEPENDENCE TIPS -->
+    <section class="section section-bg-alt">
+      <div class="container">
+        <div class="grid-2 align-center">
+          <div data-animate="slide-left">
+            <div class="card-img-wrapper" style="aspect-ratio: 4/3; border-radius: var(--radius-lg);">
+              <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1000&q=80" alt="Elderly person using adaptive reacher tool in home kitchen">
+            </div>
+          </div>
+
+          <div data-animate="slide-right">
+            <span class="section-subtitle">Practical Advice</span>
+            <h2>Ergonomic Modifications for Everyday Freedom</h2>
+            <p style="margin-bottom: 1.5rem;">
+              Simple, high-impact changes to your daily environment can significantly reduce joint strain and fatigue:
+            </p>
+
+            <ul style="list-style: none; margin-bottom: 2rem;">
+              <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
+                <i class="fas fa-lightbulb" style="color: var(--accent); margin-top: 4px;"></i>
+                <div>
+                  <strong>Lever Handles Over Doorknobs:</strong> Replace round door handles with lever handles to eliminate painful wrist twisting.
+                </div>
+              </li>
+              <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
+                <i class="fas fa-lightbulb" style="color: var(--accent); margin-top: 4px;"></i>
+                <div>
+                  <strong>Built-Up Utensil Handles:</strong> Use foam tubing on forks, spoons, and pens to lessen pinch force required.
+                </div>
+              </li>
+              <li style="display: flex; gap: 0.75rem;">
+                <i class="fas fa-lightbulb" style="color: var(--accent); margin-top: 4px;"></i>
+                <div>
+                  <strong>Joint Conservation Energy Pacing:</strong> Alternate heavy tasks with resting periods to prevent inflammation spikes.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: THERAPY PREPARATION GUIDE -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header" data-animate="fade-in">
+          <span class="section-subtitle">First Visit Prep</span>
+          <h2 class="section-title">How to Prepare for Your Initial Evaluation</h2>
+          <p class="section-desc">Follow these 3 simple steps to ensure a smooth, comprehensive first visit.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card" data-animate="fade-in">
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">01</div>
+            <h4>Bring Surgical Notes</h4>
+            <p>Bring physician referrals, surgical operative reports, or X-ray imaging reports if available.</p>
+          </div>
+
+          <div class="card" data-animate="fade-in">
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--secondary); margin-bottom: 0.5rem;">02</div>
+            <h4>Wear Comfortable Attire</h4>
+            <p>Wear loose-fitting clothing that allows easy exposure of the shoulder, elbow, wrist, or knee being evaluated.</p>
+          </div>
+
+          <div class="card" data-animate="fade-in">
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--accent); margin-bottom: 0.5rem;">03</div>
+            <h4>List Daily Goals</h4>
+            <p>Jot down 2-3 specific activities (e.g. typing 30 mins, opening jar) you wish to perform without pain.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: PATIENT SUPPORT CTA -->
+    <section class="section" style="background: linear-gradient(135deg, var(--primary) 0%, #072A2D 100%); color: #FFFFFF; padding: 5.5rem 0;">
+      <div class="container text-center" data-animate="zoom-in">
+        <span class="badge badge-accent" style="margin-bottom: 1.25rem; padding: 0.5rem 1.25rem;">Clinical Support</span>
+        <h2 style="color: #FFFFFF; font-size: clamp(2rem, 3.5vw, 3rem); margin-bottom: 1.25rem;">Have Questions About Your Rehabilitation Options?</h2>
+        <p style="color: rgba(255, 255, 255, 0.88); font-size: 1.15rem; max-width: 750px; margin: 0 auto 2.5rem auto;">
+          Our patient care intake team is available Monday through Friday to answer your insurance and therapy questions.
+        </p>
+        <div class="btn-group-equal" style="justify-content: center;">
+          <a href="contact.html" class="btn btn-accent btn-lg"><i class="fas fa-question-circle"></i> Contact Patient Support</a>
+          <a href="#" class="btn btn-outline btn-lg" style="border-color: #FFFFFF; color: #FFFFFF !important;" data-modal-target="booking-modal"><i class="fas fa-calendar-alt"></i> Schedule Evaluation</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Reusable Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <i class="fas fa-hand-holding-heart"></i>
+            <span>RehabNest</span>
+          </a>
+          <p>Dedicated to helping individuals of all ages overcome physical, sensory, and cognitive barriers to live fully independent lives.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-widget">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="therapists.html">Our Therapists</a></li>
+            <li><a href="resources.html">Patient Resources</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-widget">
+          <h4>Clinical Services</h4>
+          <ul class="footer-links">
+            <li><a href="hand-therapy.html">Hand & Upper Limb Therapy</a></li>
+            <li><a href="sensory-integration.html">Sensory Integration</a></li>
+            <li><a href="post-injury-rehab.html">Post-Injury Rehabilitation</a></li>
+            <li><a href="services.html">Pediatric Occupational Therapy</a></li>
+            <li><a href="services.html">Daily Living Skills Retraining</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-widget">
+          <h4>Contact Information</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>452 Healthcare Boulevard, Suite 300, Medical Plaza, NY 10001</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <span>(555) 234-5678 / (555) 876-5432</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>care@rehabnest-clinic.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 RehabNest Occupational Therapy. All Rights Reserved.</p>
+        <div style="display: flex; gap: 1.5rem; align-items: center;">
+          <a href="login.html" style="color: #8EADAD;">Patient Login</a>
+          <a href="signup.html" style="color: #8EADAD;">Register Portal</a>
+          <a href="404.html" style="color: #8EADAD;">Privacy Policy</a>
+          <button class="back-to-top-btn" title="Back to Top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Booking Modal -->
+  <div class="modal-overlay" id="booking-modal">
+    <div class="modal-card">
+      <button class="modal-close" data-modal-close><i class="fas fa-times"></i></button>
+      <h3><i class="fas fa-calendar-check" style="color: var(--primary);"></i> Book Therapy Session</h3>
+      <form data-validate>
+        <div class="form-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" class="form-control" required placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone Number *</label>
+          <input type="tel" class="form-control" required placeholder="(555) 000-0000">
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Request</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

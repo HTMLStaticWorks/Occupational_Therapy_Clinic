@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Patient Account | RehabNest Occupational Therapy</title>
+  <meta name="description" content="Register for your RehabNest Patient Portal account to view home exercise schedules and connect with your therapist.">
+  
+  <link rel="icon" href="https://img.icons8.com/isometric/50/hands.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/rtl.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+  <div class="auth-wrapper" style="position: relative;">
+    <!-- Theme & Layout Toggles -->
+    <div class="auth-top-actions" style="position: absolute; top: 1.5rem; right: 1.5rem; display: flex; gap: 0.75rem; z-index: 100;">
+      <button class="toggle-btn" id="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Light/Dark Theme"><i class="fas fa-moon"></i></button>
+      <button class="toggle-btn" id="rtl-toggle" aria-label="Toggle RTL" title="Toggle LTR/RTL Layout"><i class="fas fa-globe"></i></button>
+    </div>
+
+    <div class="auth-card" style="max-width: 520px;" data-animate="fade-in">
+      <a href="index.html" class="brand-logo auth-brand">
+        <i class="fas fa-hand-holding-heart"></i>
+        <span>RehabNest</span>
+      </a>
+
+      <h2 class="auth-title">Create Patient Account</h2>
+      <p class="auth-subtitle">Register to track your therapy progress and home exercise programs.</p>
+
+      <form data-validate action="dashboard.html" method="GET">
+        <div class="form-group text-left" style="text-align: left;">
+          <label class="form-label">Full Name *</label>
+          <input type="text" class="form-control" required placeholder="John Doe">
+          <span class="form-error">Full name is required</span>
+        </div>
+
+        <div class="form-group text-left" style="text-align: left;">
+          <label class="form-label">Email Address *</label>
+          <input type="email" class="form-control" required placeholder="john@example.com">
+          <span class="form-error">Valid email required</span>
+        </div>
+
+        <div class="form-group text-left" style="text-align: left;">
+          <label class="form-label">Phone Number *</label>
+          <input type="tel" class="form-control" required placeholder="(555) 000-0000">
+          <span class="form-error">Phone number required</span>
+        </div>
+
+        <div class="form-group text-left" style="text-align: left;">
+          <label class="form-label">Password *</label>
+          <div class="password-input-wrapper">
+            <input type="password" name="password" class="form-control" required placeholder="••••••••">
+            <i class="fas fa-eye password-toggle-icon"></i>
+          </div>
+          <span class="form-error">Password required</span>
+        </div>
+
+        <div class="form-group text-left" style="text-align: left;">
+          <label class="form-label">Confirm Password *</label>
+          <div class="password-input-wrapper">
+            <input type="password" name="confirm_password" class="form-control" required placeholder="••••••••">
+            <i class="fas fa-eye password-toggle-icon"></i>
+          </div>
+          <span class="form-error">Passwords must match</span>
+        </div>
+
+        <div class="form-group text-left" style="text-align: left; margin-bottom: 1.5rem;">
+          <label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer; font-size: 0.85rem; color: var(--text-muted);">
+            <input type="checkbox" required style="accent-color: var(--primary); margin-top: 3px;">
+            I agree to RehabNest Privacy Policy and Patient Portal Terms & Conditions.
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.9rem;">
+          <i class="fas fa-user-plus"></i> Create Account
+        </button>
+      </form>
+
+      <div class="auth-divider">
+        <span>OR REGISTER WITH</span>
+      </div>
+
+      <div class="social-auth-grid">
+        <button class="social-auth-btn" title="Sign up with Google"><i class="fab fa-google" style="color: #EA4335;"></i></button>
+        <button class="social-auth-btn" title="Sign up with Apple"><i class="fab fa-apple"></i></button>
+        <button class="social-auth-btn" title="Sign up with Facebook"><i class="fab fa-facebook-f" style="color: #1877F2;"></i></button>
+      </div>
+
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 1.5rem;">
+        Already have a patient account? <a href="login.html" style="color: var(--primary); font-weight: 700;">Login Here</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

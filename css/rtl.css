@@ -1,0 +1,58 @@
+/* RehabNest Occupational Therapy - RTL Stylesheet */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .brand-logo {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .section-header {
+  text-align: center; /* keep centered titles centered */
+}
+
+[dir="rtl"] .nav-link.active::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .footer-links a:hover {
+  padding-left: 0;
+  padding-right: 4px;
+}
+
+[dir="rtl"] .btn i {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .modal-close {
+  right: auto;
+  left: 1.25rem;
+}
+
+[dir="rtl"] .nav-actions {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .auth-top-actions {
+  right: auto !important;
+  left: 1.5rem !important;
+}
+
+/* RTL Dashboard adjustments */
+[dir="rtl"] .dashboard-sidebar {
+  border-right: none;
+  border-left: 1px solid var(--card-border);
+}
+
+[dir="rtl"] .dashboard-nav-link i {
+  margin-right: 0;
+  margin-left: 0.75rem;
+}
+
+[dir="rtl"] .stat-card-icon {
+  margin-right: 0;
+  margin-left: 1rem;
+}
