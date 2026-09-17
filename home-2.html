@@ -73,9 +73,9 @@
           </div>
 
           <div data-animate="slide-right" style="position: relative;">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-              <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80" alt="Therapist encouraging elderly patient" style="border-radius: var(--radius-md); width: 100%; height: 450px; object-fit: cover; box-shadow: var(--shadow-sm);">
-              <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=80" alt="Occupational therapist working on fine motor dexterity" style="border-radius: var(--radius-md); width: 100%; height: 450px; object-fit: cover; transform: translateY(30px); box-shadow: var(--shadow-sm);">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+              <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80" alt="Therapist encouraging elderly patient" style="border-radius: var(--radius-md); width: 100%; height: clamp(280px, 40vw, 450px); object-fit: cover; box-shadow: var(--shadow-sm);">
+              <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=80" alt="Occupational therapist working on fine motor dexterity" style="border-radius: var(--radius-md); width: 100%; height: clamp(280px, 40vw, 450px); object-fit: cover; box-shadow: var(--shadow-sm);">
             </div>
           </div>
         </div>
@@ -201,9 +201,22 @@
           <p class="section-desc">Access interactive digital exercise routines prescribed directly by your therapist.</p>
         </div>
 
-        <div class="card" data-animate="fade-in">
-          <div class="grid-2 align-center">
-            <div style="text-align: left;">
+        <style>
+          @media (max-width: 768px) {
+            .portal-grid { display: flex !important; flex-direction: column; gap: 2rem; }
+            .portal-text { text-align: center !important; }
+            .portal-text ul { 
+              display: inline-block !important; 
+              text-align: left; 
+              margin: 0 auto 1.5rem auto !important; 
+              max-width: 280px;
+            }
+            .portal-text .btn { width: 100%; justify-content: center; }
+          }
+        </style>
+        <div class="card" data-animate="fade-in" style="overflow: hidden;">
+          <div class="grid-2 portal-grid" style="align-items: center;">
+            <div class="portal-text" style="text-align: left;">
               <span class="badge badge-accent" style="margin-bottom: 1rem;">Portal Preview</span>
               <h3>Digital Exercise Checklist & Video Demonstrations</h3>
               <p>
