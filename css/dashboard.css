@@ -109,6 +109,12 @@
 body {
   padding-top: 0 !important;
   margin-top: 0 !important;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .dashboard-container {
@@ -148,6 +154,12 @@ body {
   padding: 1.5rem 1rem;
   flex: 1;
   overflow-y: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.sidebar-nav::-webkit-scrollbar {
+  display: none;
 }
 
 .sidebar-menu {
