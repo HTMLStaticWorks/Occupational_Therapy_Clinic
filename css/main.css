@@ -733,7 +733,8 @@ html, body {
     text-align: center;
   }
 
-  .hero-section .grid-2 {
+  .hero-section .grid-2,
+  .stack-tab.grid-2 {
     grid-template-columns: 1fr !important;
     gap: 3rem;
   }
@@ -745,7 +746,7 @@ html, body {
   .grid-3 > :nth-child(3):last-child,
   .grid-3 > :last-child:nth-child(odd) {
     grid-column: span 2 !important;
-    max-width: 540px;
+    max-width: calc(50% - 1rem);
     width: 100%;
     margin-left: auto !important;
     margin-right: auto !important;
