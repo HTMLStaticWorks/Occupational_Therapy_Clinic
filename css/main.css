@@ -757,7 +757,7 @@ html, body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   /* Mobile view align one-by-one */
   .grid-4, .grid-3, .grid-2 { 
     grid-template-columns: 1fr !important; 
