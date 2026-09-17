@@ -6,7 +6,7 @@
   <title>Contact RehabNest Occupational Therapy | Clinic Location & Booking</title>
   <meta name="description" content="Get in touch with RehabNest Occupational Therapy Clinic. Schedule an evaluation, request insurance info, or visit our medical plaza facility.">
   
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/dark-mode.css">
@@ -35,7 +35,7 @@
           <li class="mobile-nav-cta">
             <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 0.85rem;">
               <button class="toggle-btn theme-toggle-btn" aria-label="Toggle Dark Mode" title="Toggle Light/Dark Theme"><i class="fas fa-moon"></i></button>
-              <button class="toggle-btn rtl-toggle-btn" aria-label="Toggle RTL" title="Toggle LTR/RTL Layout"><i class="fas fa-globe"></i></button>
+              <button class="toggle-btn rtl-toggle-btn" aria-label="Toggle RTL" title="Toggle LTR/RTL Layout"><i class="fas fa-exchange-alt"></i></button>
             </div>
             <a href="signup.html" class="btn btn-sm btn-primary" style="width: 100%; justify-content: center;"><i class="fas fa-user-plus"></i> Sign Up</a>
           </li>
@@ -44,7 +44,7 @@
 
       <div class="nav-actions">
         <button class="toggle-btn" id="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Light/Dark Theme"><i class="fas fa-moon"></i></button>
-        <button class="toggle-btn" id="rtl-toggle" aria-label="Toggle RTL" title="Toggle LTR/RTL Layout"><i class="fas fa-globe"></i></button>
+        <button class="toggle-btn" id="rtl-toggle" aria-label="Toggle RTL" title="Toggle LTR/RTL Layout"><i class="fas fa-exchange-alt"></i></button>
         <a href="signup.html" class="btn btn-sm btn-primary"><i class="fas fa-user-plus"></i> Sign Up</a>
         <button class="mobile-toggle" id="mobile-toggle" aria-label="Mobile Navigation"><i class="fas fa-bars"></i></button>
       </div>
@@ -62,23 +62,26 @@
           Have questions regarding insurance coverage, clinic appointments, or therapy evaluations? Contact our team today.
         </p>
 
-        <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
-          <span style="font-weight: 600; color: var(--text-muted); font-size: 0.95rem;">Follow Our Community:</span>
-          <div style="display: flex; gap: 0.85rem; align-items: center;">
-            <a href="#" class="contact-social-btn fb" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="contact-social-btn tw" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="contact-social-btn ig" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="contact-social-btn li" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="contact-social-btn yt" aria-label="YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>
-          </div>
-        </div>
       </div>
     </section>
 
     <!-- SECTION 2: CONTACT INFORMATION -->
+    <style>
+      @media (max-width: 1024px) {
+        .contact-info-grid .card {
+          align-items: center !important;
+          text-align: center !important;
+        }
+        .contact-info-grid .card h3,
+        .contact-info-grid .card p {
+          text-align: center !important;
+          width: 100%;
+        }
+      }
+    </style>
     <section class="section">
       <div class="container">
-        <div class="grid-4">
+        <div class="grid-4 contact-info-grid">
           <div class="card text-center" data-animate="fade-in">
             <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 1.25rem auto;">
               <i class="fas fa-phone-alt"></i>
@@ -111,10 +114,9 @@
               <i class="fas fa-share-alt"></i>
             </div>
             <h3>Social Media</h3>
-            <p style="margin-bottom: 1rem; font-size: 0.95rem; color: var(--text-muted);">Connect on our platforms</p>
+
             <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
               <a href="#" class="contact-social-btn fb" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="contact-social-btn tw" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
               <a href="#" class="contact-social-btn ig" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
               <a href="#" class="contact-social-btn li" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
               <a href="#" class="contact-social-btn yt" aria-label="YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>

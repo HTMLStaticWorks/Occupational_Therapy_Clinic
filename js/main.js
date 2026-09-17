@@ -81,22 +81,37 @@ function initMobileMenu() {
   const navMenu = document.getElementById('nav-menu');
 
   if (mobileToggle && navMenu) {
+    const navLinks = navMenu.querySelectorAll('.nav-link');
+    
     mobileToggle.addEventListener('click', () => {
       navMenu.classList.toggle('active');
       const icon = mobileToggle.querySelector('i');
       if (navMenu.classList.contains('active')) {
         icon.className = 'fas fa-times';
+        document.body.style.overflow = 'hidden';
       } else {
         icon.className = 'fas fa-bars';
+        document.body.style.overflow = '';
       }
     });
 
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+    // Close menu and unlock scroll when a link is clicked
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         const icon = mobileToggle.querySelector('i');
         if (icon) icon.className = 'fas fa-bars';
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Close menu and unlock scroll when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target) && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        const icon = mobileToggle.querySelector('i');
+        if (icon) icon.className = 'fas fa-bars';
+        document.body.style.overflow = '';
       }
     });
   }

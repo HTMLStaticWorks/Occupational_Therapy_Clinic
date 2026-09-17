@@ -70,7 +70,7 @@ body {
   background-color: var(--bg-main);
   color: var(--text-main);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
   padding-top: 80px;
   -webkit-font-smoothing: antialiased;
 }
@@ -241,7 +241,7 @@ img {
 }
 
 .btn-group-equal .btn {
-  flex: 1 1 0;
+  flex: 0 1 auto;
   min-width: 200px;
   justify-content: center;
   text-align: center;
@@ -333,6 +333,11 @@ img {
   gap: 1rem;
 }
 
+/* Utility Classes */
+.text-center { text-align: center !important; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+
 /* Utility Toggles */
 .toggle-btn {
   background: var(--bg-alt);
@@ -388,11 +393,12 @@ img {
 
 /* Footer */
 .site-footer {
-  background-color: #071E20;
-  color: #B5C9C9;
+  background-color: var(--bg-alt);
+  color: var(--text-muted);
   padding: 5rem 0 2rem 0;
   position: relative;
   overflow: hidden;
+  border-top: 1px solid var(--glass-border);
 }
 
 .footer-top {
@@ -400,15 +406,14 @@ img {
   grid-template-columns: 1.5fr repeat(3, 1fr);
   gap: 3rem;
   padding-bottom: 4rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--glass-border);
 }
 
 .footer-brand .brand-logo {
-  color: #FFFFFF;
   margin-bottom: 1.25rem;
 }
 .footer-brand p {
-  color: #8EADAD;
+  color: var(--text-muted);
   margin-bottom: 1.5rem;
 }
 
@@ -420,15 +425,15 @@ img {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
-  color: #FFFFFF;
+  background: var(--primary-light);
+  color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all var(--transition-fast);
 }
 .social-link:hover {
-  background: var(--secondary);
+  background: var(--primary);
   color: #FFFFFF;
   transform: translateY(-3px);
 }
@@ -462,7 +467,7 @@ img {
 .contact-social-btn.yt:hover { background: #FF0000; border-color: #FF0000; box-shadow: 0 10px 22px rgba(255, 0, 0, 0.45); }
 
 .footer-widget h4 {
-  color: #FFFFFF;
+  color: var(--heading-color);
   font-size: 1.15rem;
   margin-bottom: 1.5rem;
 }
@@ -474,11 +479,11 @@ img {
   margin-bottom: 0.75rem;
 }
 .footer-links a {
-  color: #8EADAD;
+  color: var(--text-muted);
   transition: color var(--transition-fast);
 }
 .footer-links a:hover {
-  color: #FFFFFF;
+  color: var(--primary);
   padding-left: 4px;
 }
 
@@ -487,7 +492,7 @@ img {
   align-items: flex-start;
   gap: 0.75rem;
   margin-bottom: 1rem;
-  color: #8EADAD;
+  color: var(--text-muted);
 }
 .footer-contact-item i {
   color: var(--secondary);
@@ -500,7 +505,7 @@ img {
   justify-content: space-between;
   padding-top: 2rem;
   font-size: 0.875rem;
-  color: #6C8E8E;
+  color: var(--text-muted);
 }
 
 /* Card Styling */
@@ -527,11 +532,13 @@ img {
 }
 
 .card-img-wrapper {
-  border-radius: var(--radius-sm);
+  border-radius: calc(var(--radius-md) - 1px) calc(var(--radius-md) - 1px) 0 0;
   overflow: hidden;
-  margin-bottom: 1.5rem;
   position: relative;
   aspect-ratio: 16 / 10;
+}
+.card .card-img-wrapper {
+  margin: -2rem -2rem 1.5rem -2rem;
 }
 .card-img-wrapper img {
   width: 100%;
@@ -544,6 +551,14 @@ img {
 }
 
 /* Badges & Tags */
+.card h2,
+.card h3,
+.card h4 {
+  min-height: 3em; /* Reserves a strict box larger than 2 lines to guarantee alignment */
+}
+.card h3 { font-size: 1.25rem; }
+.card h4 { font-size: 1.1rem; }
+
 .badge {
   display: inline-block;
   padding: 0.35rem 0.85rem;
@@ -634,6 +649,12 @@ img {
   font-size: 0.95rem;
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
+select.form-control {
+  padding-right: 2.5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
 .form-control:focus {
   outline: none;
   border-color: var(--secondary);
@@ -672,7 +693,7 @@ img {
 
 /* Responsive Adjustments & Screen Overflow Controls */
 html, body {
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
 }
 
@@ -682,7 +703,7 @@ html, body {
 
 @media (max-width: 1024px) {
   html, body {
-    overflow-x: hidden !important;
+    overflow-x: clip !important;
     width: 100% !important;
   }
   .mobile-toggle { display: block; }

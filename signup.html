@@ -6,7 +6,7 @@
   <title>Create Patient Account | RehabNest Occupational Therapy</title>
   <meta name="description" content="Register for your RehabNest Patient Portal account to view home exercise schedules and connect with your therapist.">
   
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/dark-mode.css">
@@ -17,12 +17,13 @@
 
   <div class="auth-wrapper" style="position: relative;">
     <!-- Theme & Layout Toggles -->
-    <div class="auth-top-actions" style="position: absolute; top: 1.5rem; right: 1.5rem; display: flex; gap: 0.75rem; z-index: 100;">
+    <div class="auth-top-actions" style="position: absolute; top: 1.25rem; right: 1.5rem; display: flex; gap: 0.75rem; z-index: 100;">
       <button class="toggle-btn" id="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Light/Dark Theme"><i class="fas fa-moon"></i></button>
-      <button class="toggle-btn" id="rtl-toggle" aria-label="Toggle RTL" title="Toggle LTR/RTL Layout"><i class="fas fa-globe"></i></button>
+      <button class="toggle-btn" id="rtl-toggle" aria-label="Toggle RTL" title="Toggle LTR/RTL Layout"><i class="fas fa-exchange-alt"></i></button>
     </div>
 
-    <div class="auth-card" style="max-width: 520px;" data-animate="fade-in">
+    <div class="auth-card" style="max-width: 520px; position: relative;" data-animate="fade-in">
+
       <a href="index.html" class="brand-logo auth-brand">
         <i class="fas fa-hand-holding-heart"></i>
         <span>RehabNest</span>
@@ -90,7 +91,7 @@
         <button class="social-auth-btn" title="Sign up with Facebook"><i class="fab fa-facebook-f" style="color: #1877F2;"></i></button>
       </div>
 
-      <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 1.5rem;">
+      <p class="auth-footer-text">
         Already have a patient account? <a href="login.html" style="color: var(--primary); font-weight: 700;">Login Here</a>
       </p>
     </div>

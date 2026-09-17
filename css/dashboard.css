@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   background: radial-gradient(circle at 10% 20%, rgba(14, 74, 78, 0.05) 0%, rgba(43, 122, 120, 0.02) 90%), var(--bg-alt);
-  padding: 2rem 1.5rem;
+  padding: 5rem 1.5rem 2rem 1.5rem;
 }
 
 .auth-card {
@@ -59,6 +59,19 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 0.75rem;
   margin-bottom: 1.5rem;
+}
+
+.auth-footer-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-top: 2rem;
+}
+
+@media (max-width: 640px) {
+  .auth-footer-text {
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
 }
 
 .social-auth-btn {
@@ -251,7 +264,7 @@ body {
   border-radius: var(--radius-md);
   padding: 1.5rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1.25rem;
   box-shadow: var(--shadow-sm);
 }
@@ -325,8 +338,17 @@ body {
   text-transform: uppercase;
 }
 
-/* Mobile Sidebar Drawer */
 @media (max-width: 1024px) {
+  .custom-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .custom-table::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
   .sidebar-toggle-btn, .sidebar-close-btn {
     display: inline-flex !important;
   }
@@ -350,13 +372,13 @@ body {
 
 @media (max-width: 640px) {
   html, body {
-    overflow-x: hidden !important;
+    overflow-x: clip !important;
     width: 100% !important;
   }
   .dashboard-container {
     width: 100% !important;
     max-width: 100% !important;
-    overflow-x: hidden !important;
+    overflow-x: clip !important;
   }
   .dashboard-main {
     width: 100% !important;
@@ -380,6 +402,8 @@ body {
   .topbar-title-text h3 {
     font-size: 1.05rem !important;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .dashboard-content {
     padding: 1rem 0.85rem !important;
